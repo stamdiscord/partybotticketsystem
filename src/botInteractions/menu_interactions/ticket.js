@@ -13,7 +13,7 @@ module.exports = {
 	},
     async openTicket (Interaction, member, sendString, defer = true, killar = false){
         return new Promise(async resolve =>{
-            let ticketParent = "821139274589274143";
+            let ticketParent = "1110985609218113596";
             if(ticketParent == "") return Interaction.channel.send("Du behöver sätta in ID till en ticket kategori!")
         
             const row = new ActionRowBuilder()
@@ -129,7 +129,7 @@ module.exports = {
     },
     async archiveTicket(Interaction, messageID, memberID) {
 
-        let archivedTicketParent = "1073314502600294400"
+        let archivedTicketParent = undefined;
 
         if (!archivedTicketParent) {
             Interaction.reply("Det gick inte att arkivera ticketen eftersom att guild config värdet `archivedTicketParent` inte är definierat! Medlemmen noterades dock ändå.")
